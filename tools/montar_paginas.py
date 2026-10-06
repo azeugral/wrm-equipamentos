@@ -8,7 +8,7 @@ Uso: python tools/montar_paginas.py"""
 import html, json, pathlib, re
 
 RAIZ = pathlib.Path(__file__).resolve().parents[1]
-V = 2  # subir a cada deploy que mude CSS/JS
+V = 3  # subir a cada deploy que mude CSS/JS
 ATUAL = ' aria-current="page"'
 MENU = [("pecas.html", "Peças"), ("index.html#usinagem", "Usinagem"), ("index.html#equipamentos", "Equipamentos"),
         ("index.html#empresa", "Empresa"), ("index.html#contato", "Contato")]
@@ -78,6 +78,7 @@ RODAPE = """</main>
       <div>
         <h2 class="rodape__tit">Endereço</h2>
         <address>Rua Rafael Cervone, 151<br>Distrito Industrial I<br>Santa Bárbara d'Oeste/SP<br>CEP 13456-112</address>
+        <p class="rodape__hora">Seg e sex · 7h30 às 16h30<br>Ter a qui · 7h30 às 17h30</p>
       </div>
     </div>
     <div class="rodape__fim">
@@ -173,6 +174,10 @@ def main():
                 "description": desc, "url": "https://www.wrmequipamentos.com.br/", "image": "assets/img/og.jpg",
                 "telephone": "+55-19-99836-0495", "email": "wrm.usinagem@gmail.com", "foundingDate": "2000-07-03",
                 "taxID": "03.934.396/0001-32",
+                "openingHoursSpecification": [
+                    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Friday"], "opens": "07:30", "closes": "16:30"},
+                    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"], "opens": "07:30", "closes": "17:30"},
+                ],
                 "address": {"@type": "PostalAddress", "streetAddress": "Rua Rafael Cervone, 151 - Distrito Industrial I",
                             "addressLocality": "Santa Bárbara d'Oeste", "addressRegion": "SP", "postalCode": "13456-112", "addressCountry": "BR"},
             }, ensure_ascii=False) + "</script>\n"

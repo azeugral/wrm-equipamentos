@@ -33,7 +33,7 @@ Conceito "folha de desenho técnico": grade fina de prancha, carimbo (quadro de 
 Campos pendentes aparecem com contorno tracejado (`.a-confirmar`).
 
 1. Texto institucional: história, parque de máquinas, clientes (Início › Empresa).
-2. Horário de atendimento; telefone fixo (19) 3455-1818 ainda ativo? (o (19) 3454-5892 do site antigo ficou de fora).
+2. Telefone fixo (19) 3455-1818 ainda ativo? (o (19) 3454-5892 do site antigo ficou de fora). Horário já veio do Google (06/10): seg e sex 7h30–16h30, ter a qui 7h30–17h30.
 3. Classificação das peças por categoria e modelo (feita pela LRGZ) e os nomes das 16 peças usinadas (descritas pela foto).
 4. "Suporte do BG-367" do site antigo virou "Suporte do BG-36"; a foto "Modelo" ficou de fora (não diz o que é).
 5. Os 8 britadores da seção Equipamentos estão à venda ou só passaram pela oficina? (hoje: "passaram pela WRM").
