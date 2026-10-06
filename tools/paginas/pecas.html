@@ -1,0 +1,93 @@
+Catálogo de peças para britadores · WRM Equipamentos
+Peças para britadores Barber Greene de mandíbula e girosféricos: eixos, pinhões, buchas, rolamentos 10E18, 10S47, 11D63, molas e fixação. Monte sua lista e peça cotação.
+pecas.html
+<section class="cat-abre folha-escura">
+  <div class="wrap">
+    <p class="rotulo rotulo--claro" data-entra>Catálogo</p>
+    <h1 class="tit tit--claro cat-abre__tit" data-entra>Peças para britadores</h1>
+    <p class="secao__txt secao__txt--claro" data-entra>Monte a lista com as peças que precisa e mande tudo de uma vez para o WhatsApp de vendas. Não achou? Mande foto ou desenho que fabricamos sob medida.</p>
+  </div>
+</section>
+
+<section class="catalogo" data-catalogo>
+  <div class="filtros" data-filtros>
+    <div class="wrap filtros__in">
+      <label class="busca">
+        <span class="sr">Buscar peça</span>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M13 13l4.5 4.5" stroke="currentColor" stroke-width="2"/></svg>
+        <input type="search" placeholder="Buscar por nome ou código (ex.: 10E18, pinhão)" data-busca autocomplete="off">
+      </label>
+      <label class="seletor">
+        <span class="sr">Modelo do britador</span>
+        <select data-modelo>
+          <option value="">Todos os modelos</option>
+          <option value="Mandíbula">Mandíbula (todos)</option>
+          <option value="25x40">Mandíbula 25x40</option>
+          <option value="Girosférico">Girosférico (todos)</option>
+          <option value="BG-36">BG-36</option>
+          <option value="BG-44">BG-44</option>
+          <option value="BG-48">BG-48</option>
+        </select>
+      </label>
+    </div>
+    <div class="wrap">
+      <div class="chips" role="group" aria-label="Categorias" data-chips>
+        <button type="button" class="chip" aria-pressed="true" data-cat="">Todas</button>
+        <button type="button" class="chip" aria-pressed="false" data-cat="Eixos">Eixos</button>
+        <button type="button" class="chip" aria-pressed="false" data-cat="Transmissão">Transmissão</button>
+        <button type="button" class="chip" aria-pressed="false" data-cat="Buchas e anéis">Buchas e anéis</button>
+        <button type="button" class="chip" aria-pressed="false" data-cat="Rolamentos">Rolamentos</button>
+        <button type="button" class="chip" aria-pressed="false" data-cat="Fixação">Fixação</button>
+        <button type="button" class="chip" aria-pressed="false" data-cat="Molas">Molas</button>
+        <button type="button" class="chip" aria-pressed="false" data-cat="Lubrificação e controle">Lubrificação e controle</button>
+        <button type="button" class="chip" aria-pressed="false" data-cat="Estrutura e proteção">Estrutura e proteção</button>
+        <button type="button" class="chip" aria-pressed="false" data-cat="Elevadores de caneca">Elevadores de caneca</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p class="contagem" data-contagem role="status"><!--TOTAL_PECAS--> peças</p>
+    <div class="grade-pecas" data-grade>
+<!--PECAS:todas-->
+      <article class="peca peca--sob" data-sob>
+        <div class="peca__info">
+          <p class="peca__cat">Sob medida</p>
+          <h3 class="peca__nome">Não encontrou a peça?</h3>
+          <p>Mande o desenho, fotos com medidas ou a peça gasta. Fabricamos sob encomenda.</p>
+        </div>
+        <a class="btn btn--azul btn--p" href="https://wa.me/5519998360495?text=Ol%C3%A1%2C%20WRM!%20Preciso%20de%20uma%20pe%C3%A7a%20que%20n%C3%A3o%20est%C3%A1%20no%20cat%C3%A1logo." target="_blank" rel="noopener">Falar com vendas</a>
+      </article>
+    </div>
+    <p class="vazio" data-vazio hidden>Nenhuma peça com esse filtro. <button type="button" class="link-seta" data-limpar>Limpar filtros</button></p>
+  </div>
+</section>
+
+<div class="lista" data-lista hidden>
+  <button type="button" class="lista__barra" data-lista-abre aria-expanded="false" aria-controls="lista-painel">
+    <span class="lista__qtd" data-lista-qtd>0</span>
+    <span class="lista__txt" data-lista-txt>itens na cotação</span>
+    <span class="lista__ver">Ver lista</span>
+  </button>
+  <div class="lista__painel" id="lista-painel" data-lista-painel hidden>
+    <div class="lista__cab">
+      <h2>Lista de cotação</h2>
+      <button type="button" class="lista__fechar" data-lista-fecha aria-label="Fechar lista">×</button>
+    </div>
+    <ul class="lista__itens" data-lista-itens></ul>
+    <form class="form form--lista" data-lista-form novalidate>
+      <div class="form__linha">
+        <label class="campo"><span>Nome</span><input name="nome" autocomplete="name"></label>
+        <label class="campo"><span>Empresa</span><input name="empresa" autocomplete="organization"></label>
+      </div>
+      <label class="campo"><span>Modelo do britador</span><input name="modelo" placeholder="ex.: BG-36, BM 30x42"></label>
+      <label class="campo"><span>Observações</span><textarea name="obs" rows="2" placeholder="Medidas, urgência, cidade de entrega"></textarea></label>
+      <div class="form__acoes">
+        <button class="btn btn--azul" type="submit">Enviar pelo WhatsApp</button>
+        <button class="btn btn--linha" type="button" data-lista-copia>Copiar lista</button>
+        <button class="link-seta link-seta--neutro" type="button" data-lista-limpa>Esvaziar</button>
+      </div>
+      <p class="form__aviso" data-lista-aviso role="status"></p>
+    </form>
+  </div>
+</div>

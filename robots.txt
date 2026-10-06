@@ -1,0 +1,3 @@
+# prévia: bloqueado até a troca de domínio
+User-agent: *
+Disallow: /
