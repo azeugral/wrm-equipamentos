@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@500;600&family=Unbounded:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="assets/css/estilo.css?v=1">
+<link rel="stylesheet" href="assets/css/estilo.css?v=2">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "WRM Indústria e Comércio de Equipamentos Ltda", "alternateName": "WRM Equipamentos", "description": "Peças, reforma e manutenção de britadores de mandíbula e girosféricos Barber Greene e usinagem sob desenho. Santa Bárbara d'Oeste/SP, desde 2000.", "url": "https://www.wrmequipamentos.com.br/", "image": "assets/img/og.jpg", "telephone": "+55-19-99836-0495", "email": "wrm.usinagem@gmail.com", "foundingDate": "2000-07-03", "taxID": "03.934.396/0001-32", "address": {"@type": "PostalAddress", "streetAddress": "Rua Rafael Cervone, 151 - Distrito Industrial I", "addressLocality": "Santa Bárbara d'Oeste", "addressRegion": "SP", "postalCode": "13456-112", "addressCountry": "BR"}}</script>
 </head>
 <body class="pg-index">
@@ -358,9 +358,13 @@
   <p class="usi__leg"><span>Fig. 16</span>Bloco usinado</p>
 </li>
     </ul>
-    <div class="usinagem__nav" aria-hidden="true">
-      <button type="button" class="seta" data-rola="-1" tabindex="-1">←</button>
-      <button type="button" class="seta" data-rola="1" tabindex="-1">→</button>
+    <div class="usinagem__nav">
+      <div class="trilho" aria-hidden="true"><span class="trilho__barra" data-trilho></span></div>
+      <p class="usinagem__cont" data-cont aria-hidden="true"><b>01</b> / 16</p>
+      <div class="setas">
+        <button type="button" class="seta" data-rola="-1" aria-label="Peças anteriores">←</button>
+        <button type="button" class="seta" data-rola="1" aria-label="Próximas peças">→</button>
+      </div>
     </div>
   </div>
 </section>
@@ -573,8 +577,8 @@
     <button class="lupa__fechar" type="button" data-fechar aria-label="Fechar">×</button>
   </figure>
 </div>
-<script src="assets/js/catalogo.js?v=1" defer></script>
-<script src="assets/js/pecas.js?v=1" defer></script>
-<script src="assets/js/main.js?v=1" defer></script>
+<script src="assets/js/catalogo.js?v=2" defer></script>
+<script src="assets/js/pecas.js?v=2" defer></script>
+<script src="assets/js/main.js?v=2" defer></script>
 </body>
 </html>

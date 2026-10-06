@@ -78,11 +78,35 @@ if (lupa) {
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !lupa.hidden) fechar(); });
 }
 
-/* setas da faixa de usinagem */
-$$("[data-rola]").forEach((b) => b.addEventListener("click", () => {
-  const faixa = $(".usinagem");
-  faixa.scrollBy({ left: Number(b.dataset.rola) * faixa.clientWidth * 0.8, behavior: "smooth" });
-}));
+/* faixa de usinagem: setas, barra de progresso e contador */
+const faixa = $(".usinagem");
+if (faixa) {
+  const barra = $("[data-trilho]");
+  const cont = $("[data-cont]");
+  const setas = $$("[data-rola]");
+  const itens = $$(".usi", faixa);
+  const passo = () => itens[1].offsetLeft - itens[0].offsetLeft;
+  const visiveis = () => Math.max(1, Math.floor((faixa.clientWidth + passo() - itens[0].offsetWidth + 1) / passo()));
+  const atualizar = () => {
+    const max = faixa.scrollWidth - faixa.clientWidth;
+    const frac = faixa.clientWidth / faixa.scrollWidth;
+    const pos = max > 0 ? faixa.scrollLeft / max : 0;
+    barra.style.width = `${frac * 100}%`;
+    barra.style.transform = `translateX(${pos * (1 / frac - 1) * 100}%)`;
+    const primeiro = Math.min(itens.length, Math.round(faixa.scrollLeft / passo()) + 1);
+    const ultimo = Math.min(itens.length, primeiro + visiveis() - 1);
+    const dd = (n) => String(n).padStart(2, "0");
+    cont.innerHTML = `<b>${dd(primeiro)}${ultimo > primeiro ? "–" + dd(ultimo) : ""}</b> / ${itens.length}`;
+    setas[0].disabled = faixa.scrollLeft <= 2;
+    setas[1].disabled = faixa.scrollLeft >= max - 2;
+  };
+  setas.forEach((b) => b.addEventListener("click", () => {
+    faixa.scrollBy({ left: Number(b.dataset.rola) * passo() * Math.floor(visiveis()), behavior: "smooth" });
+  }));
+  faixa.addEventListener("scroll", () => requestAnimationFrame(atualizar), { passive: true });
+  addEventListener("resize", atualizar);
+  atualizar();
+}
 
 /* formulário de cotação da página inicial */
 const form = $("[data-form-cotacao]");
