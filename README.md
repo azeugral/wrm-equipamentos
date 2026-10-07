@@ -14,6 +14,8 @@ HTML, CSS e JS puros, sem build. Prévia em GitHub Pages com `noindex` e `robots
 - `tools/processar.py`: lê `../_ref/assets`, gera as imagens WebP (`assets/img/pecas|equipamentos|usinagem`,
   `-p` = miniatura), `assets/js/catalogo.js`, favicon, ícones e `og.jpg`. **Nome, categoria e modelos de cada peça
   estão nas listas `PECAS`, `EQUIPAMENTOS` e `USINAGEM` desse script.** Depois de mudar, rodar ele e o montar_paginas.
+- `tools/remover_fundo.py`: tira o fundo das fotos de peças e equipamentos já geradas (rembg), mantendo o tamanho do quadro.
+  Rodar depois do `processar.py`. Com `foto.jpg destino.webp` recorta uma foto avulsa (assim foi feita a capa).
 - `tools/vetorizar_logo.py`: gera `assets/img/logo-wrm.svg` e `logo-wrm-negativo.svg` a partir do PNG antigo.
 - `assets/js/main.js`: `CONFIG` (WhatsApp de vendas e e-mail), menu, entradas, lupa, formulário de cotação.
 - `assets/js/pecas.js`: busca, filtros (categoria e modelo, com `?modelo=`, `?cat=`, `?q=` na URL) e lista de cotação
