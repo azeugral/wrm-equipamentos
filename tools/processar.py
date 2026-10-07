@@ -147,6 +147,8 @@ def main():
         webp(im, SAI / "pecas" / f"{s}-p.webp", 440, 78)
         cod = re.findall(r"\b(\d{2}[A-Z]\d{2}[A-Z]?|BG-\d+\w*|H\d{4}|\d{2}x\d{2})\b", nome)
         cat["pecas"].append({"id": s, "nome": nome, "cat": categoria, "modelos": modelos, "cod": cod, "w": tam[0], "h": tam[1]})
+    # fotos de 2026 (reformas na oficina), recortadas com remover_fundo.py; já estão em assets/img/equipamentos
+    cat["equipamentos"] += [{"id": "britador-girosferico-telsmith-com-motor-09", "nome": "Britador girosférico Telsmith com motor e base", "tipo": "Girosférico", "w": 900, "h": 675}, {"id": "britador-girosferico-telsmith-10", "nome": "Britador girosférico Telsmith", "tipo": "Girosférico", "w": 900, "h": 675}, {"id": "britador-conico-hidraulico-11", "nome": "Britador cônico hidráulico", "tipo": "Cônico hidráulico", "w": 900, "h": 675}]
     for num, nome, tipo in EQUIPAMENTOS:
         im = Image.open(achar("equipamentos", num)).convert("RGB")
         s = f"{slug(nome)}-{num}"
