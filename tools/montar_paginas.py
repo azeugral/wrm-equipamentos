@@ -8,7 +8,7 @@ Uso: python tools/montar_paginas.py"""
 import html, json, pathlib, re
 
 RAIZ = pathlib.Path(__file__).resolve().parents[1]
-V = 3  # subir a cada deploy que mude CSS/JS
+V = 4  # subir a cada deploy que mude CSS/JS
 ATUAL = ' aria-current="page"'
 MENU = [("pecas.html", "Peças"), ("index.html#usinagem", "Usinagem"), ("index.html#equipamentos", "Equipamentos"),
         ("index.html#empresa", "Empresa"), ("index.html#contato", "Contato")]

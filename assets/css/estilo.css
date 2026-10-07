@@ -110,6 +110,15 @@ h1, h2, h3 { margin: 0; }
 .link-seta--neutro::after { content: none; }
 
 /* ---------- fundo de prancha ---------- */
+/* quadro claro das fotos recortadas (peças, equipamentos, serviços) */
+.servico__foto, .peca__foto, .equip__foto {
+  background-color: var(--branco);
+  background-image:
+    linear-gradient(rgba(29,28,29,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29,28,29,.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: -1px -1px;
+}
 .folha-escura {
   background-color: var(--grafite);
   background-image:
@@ -260,8 +269,8 @@ h1, h2, h3 { margin: 0; }
 .servico { border-left: 1px solid var(--grafite); }
 .servico:first-child { border-left: 0; }
 .servico a { display: flex; flex-direction: column; height: 100%; padding: 0 0 24px; text-decoration: none; transition: background-color var(--t) var(--curva); }
-.servico__foto { display: block; aspect-ratio: 4 / 3; overflow: hidden; background: #fff; border-bottom: 1px solid var(--grafite); }
-.servico__foto img { width: 100%; height: 100%; object-fit: contain; padding: 10px; transition: transform .6s var(--curva); }
+.servico__foto { display: block; aspect-ratio: 4 / 3; overflow: hidden; border-bottom: 1px solid var(--grafite); }
+.servico__foto img { width: 100%; height: 100%; object-fit: contain; padding: 14px; filter: drop-shadow(0 10px 12px rgba(0,0,0,.2)); transition: transform .6s var(--curva); }
 .servico__foto--escura { background: var(--grafite-2); }
 .servico h3 { font: 600 18px/1.25 var(--display); letter-spacing: -.01em; margin: 22px 22px 10px; }
 .servico p { margin: 0 22px; font-size: 15px; color: var(--cinza); flex: 1; }
@@ -325,8 +334,8 @@ h1, h2, h3 { margin: 0; }
   transition: border-color var(--t) var(--curva), box-shadow var(--t) var(--curva), transform var(--t) var(--curva);
 }
 .peca[hidden] { display: none; }
-.peca__foto { display: block; padding: 0; border: 0; background: #fff; aspect-ratio: 4 / 3; overflow: hidden; cursor: zoom-in; border-bottom: 1px solid var(--linha); }
-.peca__foto img { width: 100%; height: 100%; object-fit: contain; transition: transform .6s var(--curva); }
+.peca__foto { display: block; padding: 0; border: 0; aspect-ratio: 4 / 3; overflow: hidden; cursor: zoom-in; border-bottom: 1px solid var(--linha); }
+.peca__foto img { width: 100%; height: 100%; object-fit: contain; padding: 6%; filter: drop-shadow(0 10px 12px rgba(0,0,0,.2)); transition: transform .6s var(--curva); }
 .peca__info { padding: 16px 16px 12px; flex: 1; }
 .peca__cat { margin: 0 0 6px; font: 500 11px/1.2 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--cinza); }
 .peca__nome { font: 600 16px/1.3 var(--texto); }
@@ -421,8 +430,8 @@ h1, h2, h3 { margin: 0; }
 
 /* ---------- equipamentos ---------- */
 .equipamentos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
-.equip__foto { display: block; width: 100%; padding: 0; border: 1px solid var(--linha); background: #fff; aspect-ratio: 4 / 3; overflow: hidden; cursor: zoom-in; transition: border-color var(--t) var(--curva); }
-.equip__foto img { width: 100%; height: 100%; object-fit: contain; transition: transform .6s var(--curva); }
+.equip__foto { display: block; width: 100%; padding: 0; border: 1px solid var(--linha); aspect-ratio: 4 / 3; overflow: hidden; cursor: zoom-in; transition: border-color var(--t) var(--curva); }
+.equip__foto img { width: 100%; height: 100%; object-fit: contain; padding: 6%; filter: drop-shadow(0 10px 12px rgba(0,0,0,.2)); transition: transform .6s var(--curva); }
 .equip__foto:hover { border-color: var(--grafite); }
 .equip__foto:hover img { transform: scale(1.05); }
 .equip__tipo { margin: 14px 0 4px; font: 500 11px/1.2 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--azul); }
