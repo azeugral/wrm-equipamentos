@@ -16,6 +16,8 @@ HTML, CSS e JS puros, sem build. Prévia em GitHub Pages com `noindex` e `robots
   estão nas listas `PECAS`, `EQUIPAMENTOS` e `USINAGEM` desse script.** Depois de mudar, rodar ele e o montar_paginas.
 - `tools/remover_fundo.py`: tira o fundo das fotos de peças e equipamentos já geradas (rembg), mantendo o tamanho do quadro.
   Rodar depois do `processar.py`. Com `foto.jpg destino.webp` recorta uma foto avulsa (assim foi feita a capa).
+- `assets/img/reforma/`: antes/depois (mesmo quadro 900×860, alinhados pelo flange) e etapas da reforma do girosférico Telsmith.
+  Fotos de 2026 da oficina, recortadas com rembg; os 3 equipamentos novos estão fixos em `processar.py` (não têm fonte em `_ref`).
 - `tools/vetorizar_logo.py`: gera `assets/img/logo-wrm.svg` e `logo-wrm-negativo.svg` a partir do PNG antigo.
 - `assets/js/main.js`: `CONFIG` (WhatsApp de vendas e e-mail), menu, entradas, lupa, formulário de cotação.
 - `assets/js/pecas.js`: busca, filtros (categoria e modelo, com `?modelo=`, `?cat=`, `?q=` na URL) e lista de cotação

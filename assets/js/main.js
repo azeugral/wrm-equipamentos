@@ -144,3 +144,11 @@ if (form) {
     location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent("Pedido de cotação pelo site")}&body=${encodeURIComponent(montar())}`;
   });
 }
+
+/* antes e depois da reforma: o controle (range) move a divisa */
+$$("[data-comparar]").forEach((fig) => {
+  const ctl = $("input", fig);
+  const pos = () => fig.style.setProperty("--pos", `${ctl.value}%`);
+  ctl.addEventListener("input", pos);
+  pos();
+});
